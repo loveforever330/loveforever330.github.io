@@ -8,7 +8,7 @@
     <link href="/2019/10/10/test-post/"/>
     <url>/2019/10/10/test-post/</url>
     
-    <content type="html"><![CDATA[<h3 id="自己动手搭建的博客"><a href="#自己动手搭建的博客" class="headerlink" title="自己动手搭建的博客"></a>自己动手搭建的博客</h3><blockquote><p>实现网页博客的Markdown笔记自由 </p></blockquote>]]></content>
+    <content type="html"><![CDATA[<h3 id="自己动手搭建的博客"><a href="#自己动手搭建的博客" class="headerlink" title="自己动手搭建的博客"></a>自己动手搭建的博客</h3><blockquote><p>实现网页博客的Markdown笔记自由 </p></blockquote><ul><li>实现本地写markdown笔记自动上传至网站</li></ul>]]></content>
     
     
     
