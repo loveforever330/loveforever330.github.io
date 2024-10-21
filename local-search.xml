@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>编译原理1</title>
+    <link href="/2024/10/22/compiler/"/>
+    <url>/2024/10/22/compiler/</url>
+    
+    <content type="html"><![CDATA[<h2 id="编译原理复习"><a href="#编译原理复习" class="headerlink" title="编译原理复习:"></a>编译原理复习:</h2><ul><li>DFA<blockquote><p>DFA:有限状态自动机</p></blockquote></li></ul>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Compiler</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>文章标题</title>
     <link href="/2024/10/22/test-post/"/>
     <url>/2024/10/22/test-post/</url>
@@ -17,25 +36,6 @@
       <tag>Hexo</tag>
       
       <tag>Fluid</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>编译原理1</title>
-    <link href="/2024/10/22/compiler/"/>
-    <url>/2024/10/22/compiler/</url>
-    
-    <content type="html"><![CDATA[<h2 id="编译原理复习"><a href="#编译原理复习" class="headerlink" title="编译原理复习:"></a>编译原理复习:</h2><ul><li>DFA<blockquote><p>DFA:有限状态自动机</p></blockquote></li></ul>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>Compiler</tag>
       
     </tags>
     
