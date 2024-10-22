@@ -4,7 +4,26 @@
   
   
   <entry>
-    <title>文章标题</title>
+    <title>编译原理</title>
+    <link href="/2024/10/22/compiler/"/>
+    <url>/2024/10/22/compiler/</url>
+    
+    <content type="html"><![CDATA[<h2 id="编译原理课程复习"><a href="#编译原理课程复习" class="headerlink" title="编译原理课程复习:"></a>编译原理课程复习:</h2><h3 id="1-词法分析"><a href="#1-词法分析" class="headerlink" title="1. 词法分析:"></a>1. 词法分析:</h3><h4 id="符号流"><a href="#符号流" class="headerlink" title="符号流:"></a>符号流:</h4><h3 id="2-句法分析"><a href="#2-句法分析" class="headerlink" title="2. 句法分析:"></a>2. 句法分析:</h3><h4 id="AST抽象语法树概念"><a href="#AST抽象语法树概念" class="headerlink" title="AST抽象语法树概念:"></a>AST抽象语法树概念:</h4><h3 id="3-语义分析"><a href="#3-语义分析" class="headerlink" title="3. 语义分析:"></a>3. 语义分析:</h3><blockquote></blockquote><h3 id="DFA"><a href="#DFA" class="headerlink" title="DFA"></a>DFA</h3><blockquote><p>DFA:有限状态自动机  </p></blockquote><h3 id="NFA"><a href="#NFA" class="headerlink" title="NFA"></a>NFA</h3><blockquote><p>NFA:非有限状态自动机</p></blockquote><h3 id="课程实验"><a href="#课程实验" class="headerlink" title="课程实验:"></a>课程实验:</h3><h4 id="中文分词"><a href="#中文分词" class="headerlink" title="中文分词:"></a>中文分词:</h4><p class="note note-secondary">实现思路如下</p>    <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><br></code></pre></td></tr></table></figure><h4 id="中文识别新词"><a href="#中文识别新词" class="headerlink" title="中文识别新词:"></a>中文识别新词:</h4><div class="note note-success">            <p>Talk is Cheap! </p>          </div> <blockquote><p>下面我们来看看代码:</p></blockquote><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Compiler</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>我的第一篇博客</title>
     <link href="/2024/10/22/test-post/"/>
     <url>/2024/10/22/test-post/</url>
     
@@ -17,25 +36,6 @@
       <tag>Hexo</tag>
       
       <tag>Fluid</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>编译原理1</title>
-    <link href="/2024/10/22/compiler/"/>
-    <url>/2024/10/22/compiler/</url>
-    
-    <content type="html"><![CDATA[<h2 id="编译原理课程复习"><a href="#编译原理课程复习" class="headerlink" title="编译原理课程复习:"></a>编译原理课程复习:</h2><h3 id="词法分析"><a href="#词法分析" class="headerlink" title="词法分析:"></a>词法分析:</h3><blockquote></blockquote><h3 id="句法分析"><a href="#句法分析" class="headerlink" title="句法分析:"></a>句法分析:</h3><blockquote></blockquote><h3 id="DFA"><a href="#DFA" class="headerlink" title="DFA"></a>DFA</h3><blockquote><p>DFA:有限状态自动机  </p></blockquote><h3 id="中文分词"><a href="#中文分词" class="headerlink" title="中文分词:"></a>中文分词:</h3><h3 id="识别新词"><a href="#识别新词" class="headerlink" title="识别新词:"></a>识别新词:</h3>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>Compiler</tag>
       
     </tags>
     
