@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>编译原理(ε-NFA和NFA和DFA)</title>
+    <link href="/2024/10/24/compiler/10.23%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86(%CE%B5-NFA%E5%92%8CNFA%E5%92%8CDFA)/"/>
+    <url>/2024/10/24/compiler/10.23%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86(%CE%B5-NFA%E5%92%8CNFA%E5%92%8CDFA)/</url>
+    
+    <content type="html"><![CDATA[<h3 id="DFA与NFA"><a href="#DFA与NFA" class="headerlink" title="DFA与NFA"></a>DFA与NFA</h3><p>一个状态Q需要跳转,跳转条件包括每一个sigma的集合,但同时针对于NFA,我们引入了一个<code>ε</code>,对应的集合其实实际上是空集  </p><blockquote><p>∑*:所有字符的组合和ε,即从一个字符和多个字符的组合,一个单词的无限重复构成新的单词</p></blockquote><h3 id="ε-NFA与NFA"><a href="#ε-NFA与NFA" class="headerlink" title="ε-NFA与NFA"></a><code>ε</code>-NFA与NFA</h3><p>A为初始状态,D为终止状态</p><p>考试会考:给出一个NFA或者DFA状态图,转换成表,或者相反过来</p><p>思考: 一个NFA和<code>ε</code>-NFA之间的关系</p><blockquote><ul><li>任意的不带<strong>ε</strong>对于带的,可以视为任意的状态和空集作为参数调用状态转移函数依然还等同于他自身,这样可以视为不带有<strong>ε</strong>的子集</li></ul></blockquote><p> 对于带<strong>ε</strong>对于不带的,二者之间应该如何去转换呢?</p><blockquote><ul><li>发现要想要合并,则两个接收相同状态的合并了,则会导致构成一个环,将会改变条件,出现二者重复接收同样的条件,将会永远循环.</li><li>通过添加边的方式,来实现去除原本的ε边,实现状态的转换</li></ul></blockquote><div style="text-align: center;">    <img src="https://65728-1316358396.cos.ap-beijing.myqcloud.com/imgs/postUse/202410240130856.webp?imageSlim" alt="img" style="zoom:40%;" /></div><p><code>εεε</code>&#x3D;ε  :连着几个ε其实是一样的</p><h5 id="解决方法-只要通过ε到达的状态-都去添加一条边直达ε最终指向的状态"><a href="#解决方法-只要通过ε到达的状态-都去添加一条边直达ε最终指向的状态" class="headerlink" title="解决方法: 只要通过ε到达的状态,都去添加一条边直达ε最终指向的状态"></a>解决方法: 只要通过ε到达的状态,都去添加一条边直达ε最终指向的状态</h5><ol><li>先判断到达ε边之前的边和状态</li><li>将所有的ε边去除掉,同时添加一条边从到达ε边之前的状态,将原有的到达ε边之前的状态的条件作为新的边的条件,然后指向到无论几个ε到达的边</li></ol><h5 id="如何找边"><a href="#如何找边" class="headerlink" title="如何找边:"></a>如何找边:</h5><blockquote><p>转换为:<br>给定一个状态,找以ε为边可达的状态,本质上变成对一个树的遍历.<br>可以寻找闭包:用深度优先遍历或者广度优先遍历均可</p></blockquote><p>示例:</p><div style="text-align: center;"><img src="https://65728-1316358396.cos.ap-beijing.myqcloud.com/imgs/postUse/202410240131901.webp?imageSlim" alt="img" style="zoom:30%;" /></div><div class="note note-success">            <p>Unix系统:文件查找用的也是类似有限状态自动机的原理,所以很快.</p>          </div> <hr><h3 id="RE正则表达式"><a href="#RE正则表达式" class="headerlink" title="RE正则表达式:"></a>RE正则表达式:</h3><blockquote><p>刻画了一个描述语言的规则:  语言:字符串构成的集合<br>自然语言有大量的环境,语法等规则,形式语言则可以有特定的规则,可以由DFA,NFA等有限状态机去刻画.</p></blockquote><p>程序语言-&gt;形式语言</p><div class="note note-info">            <p>证明RE和<code>ε</code>-NFA等价则NFA等价则DFA等价</p>          </div> <h5 id="表达式到字符串的一个定义-下述均为正则表达式-三个基础表达式"><a href="#表达式到字符串的一个定义-下述均为正则表达式-三个基础表达式" class="headerlink" title="表达式到字符串的一个定义,下述均为正则表达式(三个基础表达式)"></a>表达式到字符串的一个定义,下述均为正则表达式(三个基础表达式)</h5><ul><li>L{a}&#x3D;{a}:字符串为1的,类型是字符</li><li>L{ε}&#x3D;{ε}:字符串为空,类型是空字符串</li><li>L{∅}&#x3D;{∅}:空集,类型是集合</li></ul><h5 id="正则表达式运算定义"><a href="#正则表达式运算定义" class="headerlink" title="正则表达式运算定义:"></a>正则表达式运算定义:</h5><ol><li>E1+&#x2F;-E2相加减的也是一个E;</li><li>E1+∅结合的也是一个E;</li><li>E1*E2或者E1&#x2F;E2结合的也是一个E;</li></ol><h5 id="字符串的构建规则"><a href="#字符串的构建规则" class="headerlink" title="字符串的构建规则:"></a>字符串的构建规则:</h5><ol><li>L(E1+E2)&#x3D;L(E1)∪L(E2)—&gt;{E1,E2}集合</li><li>L(E1·E2)&#x3D;L(E1·L(E2)—-&gt;{w|w&#x3D;w1w2 ,w1,w2}原来两个语言的拼接</li><li>L(E1*)———&gt;L(A)*–&gt;{ε,a,aa,aaa,aaaa,aaaaa,…..}</li></ol><hr><blockquote><p>L(A*ε)&#x3D;? ,依然还是集合A的元素与ε进行拼接导致结果还是一个{A}</p></blockquote><blockquote><p>L(A*∅)&#x3D;?,结果是空集,原因与上面相同</p></blockquote><blockquote><p>L(A*)&#x3D;?依然是字符串的拼接—&gt;其中<em>的含义是闭包,L(A</em>)&#x3D;L(A)*–&gt;{ε,a,aa,aaa,aaaa,aaaaa,…..}</p></blockquote><h5 id="表达式的优先级"><a href="#表达式的优先级" class="headerlink" title="表达式的优先级:"></a>表达式的优先级:</h5><p>*&gt;·&gt;∪:闭包&gt;拼接&gt;取并集</p><div class="note note-primary">            <p>会考:</p>          </div> <p><img src="https://65728-1316358396.cos.ap-beijing.myqcloud.com/imgs/postUse/202410240131512.webp?imageSlim" alt="img" style="zoom:30%;" /><img src="https://65728-1316358396.cos.ap-beijing.myqcloud.com/imgs/postUse/202410240131184.webp?imageSlim" alt="img" style="zoom:30%;" /></p><p>最后一个的答案: 最后一个组成的字符串当中0一定会是三的倍数</p><p>概念:其实指的会是一个循环的概念,会出现多次,但是多少次无法去最终确定</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>计算机基础知识</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Compiler</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Leetcode滑动窗口</title>
     <link href="/2024/10/22/leetcode/SlideWindow/"/>
     <url>/2024/10/22/leetcode/SlideWindow/</url>
