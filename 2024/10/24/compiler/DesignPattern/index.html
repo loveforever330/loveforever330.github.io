@@ -19,16 +19,16 @@
   <meta name="author" content="GENCO">
   <meta name="keywords" content="">
   
-    <meta name="description" content="记录笔者这段时间一直在学习的编译原理课程,以备期末复习使用">
+    <meta name="description" content="设计模式中:工厂模式,抽象工厂模式,单例模式,三选一">
 <meta property="og:type" content="article">
 <meta property="og:title" content="设计模式">
 <meta property="og:url" content="http://example.com/2024/10/24/compiler/DesignPattern/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="记录笔者这段时间一直在学习的编译原理课程,以备期末复习使用">
+<meta property="og:description" content="设计模式中:工厂模式,抽象工厂模式,单例模式,三选一">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://65728-1316358396.cos.ap-beijing.myqcloud.com/imgs/postUse/202410242248382.webp?imageSlim">
 <meta property="article:published_time" content="2024-10-24T14:49:00.000Z">
-<meta property="article:modified_time" content="2024-10-24T14:49:36.748Z">
+<meta property="article:modified_time" content="2024-10-25T02:13:50.358Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="DesignPattern">
 <meta name="twitter:card" content="summary_large_image">
@@ -304,19 +304,19 @@
 <li><code>业务场景</code>:多种类型商品不同接口,统一发奖服务搭建场景</li>
 <li><code>实现要点</code>: 定义一个创建对象的接口,让其子类自己决定实例化哪一个工厂类,工厂模式使其创建过程延迟到子类进行</li>
 </ul>
-<h5 id="具体实现-参考菜鸟教程-基础版本"><a href="#具体实现-参考菜鸟教程-基础版本" class="headerlink" title="具体实现:参考菜鸟教程(基础版本)"></a>具体实现:参考菜鸟教程(基础版本)</h5><h6 id="简单工厂模式"><a href="#简单工厂模式" class="headerlink" title="简单工厂模式:"></a>简单工厂模式:</h6><blockquote>
+<h5 id="简单实现-参考菜鸟教程-基础版本"><a href="#简单实现-参考菜鸟教程-基础版本" class="headerlink" title="简单实现:参考菜鸟教程(基础版本)"></a>简单实现:参考菜鸟教程(基础版本)</h5><h6 id="简单工厂模式"><a href="#简单工厂模式" class="headerlink" title="简单工厂模式:"></a>简单工厂模式:</h6><blockquote>
 <p>不是一个正式的设计模式,但它是工厂模式的基础.它使用一个单独的工厂类来创建不同的对象，根据传入的参数决定创建哪种类型的对象。</p>
 </blockquote>
-<h6 id="应用实例"><a href="#应用实例" class="headerlink" title="应用实例:"></a>应用实例:</h6><blockquote>
+<h6 id="应用实例"><a href="#应用实例" class="headerlink" title="应用实例 :"></a><strong>应用实例</strong> :</h6><blockquote>
 <p> <strong>货物制造</strong>：你需要一种货物，只需从工厂提货，而不需要关心货物的制造过程及其内部实现。</p>
 </blockquote>
-<h6 id="优点"><a href="#优点" class="headerlink" title="优点:"></a>优点:</h6><ol>
+<h6 id="优点"><a href="#优点" class="headerlink" title="优点 :"></a><strong>优点</strong> :</h6><ol>
 <li>调用者只需要知道对象的名称即可创建对象。</li>
 <li>扩展性高，如果需要增加新产品，只需扩展一个工厂类即可。</li>
 <li>屏蔽了产品的具体实现，调用者只关心产品的接口。</li>
 </ol>
-<h6 id="缺点"><a href="#缺点" class="headerlink" title="缺点:"></a>缺点:</h6><p>每次增加一个产品时，都需要增加一个具体类和对应的工厂，使系统中类的数量成倍增加，增加了系统的复杂度和具体类的依赖。</p>
-<h6 id="结构"><a href="#结构" class="headerlink" title="结构:"></a>结构:</h6><ul>
+<h6 id="缺点"><a href="#缺点" class="headerlink" title="缺点 :"></a><strong>缺点</strong> :</h6><p>每次增加一个产品时，都需要增加一个具体类和对应的工厂，使系统中类的数量成倍增加，增加了系统的复杂度和具体类的依赖。</p>
+<h6 id="结构"><a href="#结构" class="headerlink" title="结构 :"></a><strong>结构</strong> :</h6><ul>
 <li>抽象产品（Abstract Product）：定义了产品的共同接口或抽象类。它可以是具体产品类的父类或接口，规定了产品对象的共同方法。</li>
 <li>具体产品（Concrete Product）：实现了抽象产品接口，定义了具体产品的特定行为和属性。</li>
 <li>抽象工厂（Abstract Factory）：声明了创建产品的抽象方法，可以是接口或抽象类。它可以有多个方法用于创建不同类型的产品。</li>
@@ -325,14 +325,30 @@
 <div style="text-align: center;">
     <img src="https://65728-1316358396.cos.ap-beijing.myqcloud.com/imgs/postUse/202410242244720.webp?imageSlim" srcset="/img/loading.gif" lazyload alt="img" style="zoom:40%;" />
 </div>
+##### 自己写的实现代码:
 
 
-<h5 id="重学设计模式中的实现代码-复杂版本"><a href="#重学设计模式中的实现代码-复杂版本" class="headerlink" title="重学设计模式中的实现代码:(复杂版本)"></a>重学设计模式中的实现代码:(复杂版本)</h5><h4 id="2-抽象工厂"><a href="#2-抽象工厂" class="headerlink" title="2. 抽象工厂:"></a>2. 抽象工厂:</h4><ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4 id="2-抽象工厂"><a href="#2-抽象工厂" class="headerlink" title="2. 抽象工厂:"></a>2. 抽象工厂:</h4><ul>
 <li><code>业务场景</code> :替换Redis双集群升级,代理类抽象场景</li>
 <li><code>实现要点</code> : 提供一个创建一系列相关或者相互依赖对象的接口,而无需要去指定它们的具体的类</li>
 </ul>
-<h5 id="具体代码实现-参考菜鸟教程"><a href="#具体代码实现-参考菜鸟教程" class="headerlink" title="具体代码实现:参考菜鸟教程"></a>具体代码实现:参考菜鸟教程</h5><blockquote>
-<h5 id="超级工厂"><a href="#超级工厂" class="headerlink" title="超级工厂"></a>超级工厂</h5><p>围绕一个超级工厂去创建其他工厂,该超级工厂又被称为其他工厂的工厂,此类设计模式属于创建型模式</p>
+<h5 id="简单代码实现-参考菜鸟教程"><a href="#简单代码实现-参考菜鸟教程" class="headerlink" title="简单代码实现:参考菜鸟教程"></a><strong>简单代码实现:参考菜鸟教程</strong></h5><blockquote>
+<h5 id="超级工厂"><a href="#超级工厂" class="headerlink" title="超级工厂"></a><strong>超级工厂</strong></h5><p>围绕一个超级工厂去创建其他工厂,该超级工厂又被称为其他工厂的工厂,此类设计模式属于创建型模式</p>
 <p><code>对应接口</code> :负责创建一个相关对象的工厂,不需要显式的指定它们的类,每个生成的工厂都能够按照工厂模式提供对象</p>
 <h5 id="应用实例-1"><a href="#应用实例-1" class="headerlink" title="应用实例:"></a>应用实例:</h5><p>比如一个汽车行业公司只负责决策,其下有多个子公司生产不同的车</p>
 <p>汽车行业总公司:抽象工厂</p>
@@ -356,9 +372,21 @@
 <div style="text-align: center;">
     <img src="https://65728-1316358396.cos.ap-beijing.myqcloud.com/imgs/postUse/202410242245926.webp?imageSlim" srcset="/img/loading.gif" lazyload alt="img" style="zoom:40%;" />
 </div>
+##### 自己写的实现代码:
 
 
-<h5 id="重学设计模式当中的代码-复杂版本"><a href="#重学设计模式当中的代码-复杂版本" class="headerlink" title="重学设计模式当中的代码:(复杂版本)"></a>重学设计模式当中的代码:(复杂版本)</h5><h4 id="3-单例模式"><a href="#3-单例模式" class="headerlink" title="3. 单例模式:"></a>3. 单例模式:</h4><ul>
+
+
+
+ 
+
+
+
+
+
+
+
+<h4 id="3-单例模式"><a href="#3-单例模式" class="headerlink" title="3. 单例模式:"></a>3. 单例模式:</h4><ul>
 <li><p><code>业务场景</code>: :seven:种设计模式,<code>Effective java</code> 作者推荐枚举单例模式.</p>
 </li>
 <li><p><code>实现要点</code>: 保证一个类当中仅仅有一个实例,同时提供一个可以访问它的全局访问点.</p>
