@@ -19,24 +19,23 @@
   <meta name="author" content="GENCO">
   <meta name="keywords" content="">
   
-    <meta name="description" content="由于最近笔者刷Leetcode经常遇到问题,写个帖子来记录一下">
+    <meta name="description" content="记录笔者这段时间的编译原理课设.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Leetcode经典题目">
-<meta property="og:url" content="http://example.com/2024/10/22/leetcode/SlideWindow/index.html">
+<meta property="og:title" content="编译原理(自己一步步设计一门语言)">
+<meta property="og:url" content="http://example.com/2024/12/12/compiler/2024-12-12-%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86(%E8%87%AA%E5%B7%B1%E4%B8%80%E6%AD%A5%E6%AD%A5%E8%AE%BE%E8%AE%A1%E4%B8%80%E9%97%A8%E8%AF%AD%E8%A8%80)/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="由于最近笔者刷Leetcode经常遇到问题,写个帖子来记录一下">
+<meta property="og:description" content="记录笔者这段时间的编译原理课设.">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://65728-1316358396.cos.ap-beijing.myqcloud.com/6.png">
-<meta property="article:published_time" content="2024-10-22T09:18:00.000Z">
-<meta property="article:modified_time" content="2024-12-31T03:27:18.963Z">
+<meta property="article:published_time" content="2024-12-12T14:00:00.000Z">
+<meta property="article:modified_time" content="2025-01-03T05:09:10.530Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="Leetcode">
+<meta property="article:tag" content="Compiler">
+<meta property="article:tag" content="CRAFTING INTERPRETERS">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://65728-1316358396.cos.ap-beijing.myqcloud.com/6.png">
   
   
   
-  <title>Leetcode经典题目 - Hexo</title>
+  <title>编译原理(自己一步步设计一门语言) - Hexo</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -200,13 +199,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://65728-1316358396.cos.ap-beijing.myqcloud.com/6.png') no-repeat center center; background-size: cover;">
+     style="background: url('/img/karigurashi022.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Leetcode经典题目"></span>
+            <span id="subtitle" data-typed-text="编译原理(自己一步步设计一门语言)"></span>
           
         </div>
 
@@ -217,8 +216,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-10-22 17:18" pubdate>
-          2024年10月22日 下午
+        <time datetime="2024-12-12 22:00" pubdate>
+          2024年12月12日 晚上
         </time>
       </span>
     
@@ -230,7 +229,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          151 字
+          176 字
         
       </span>
     
@@ -279,30 +278,32 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Leetcode经典题目</h1>
+            <h1 id="seo-header">编译原理(自己一步步设计一门语言)</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="滑动窗口"><a href="#滑动窗口" class="headerlink" title="滑动窗口"></a>滑动窗口</h2><h2 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h2><h3 id="母题"><a href="#母题" class="headerlink" title="母题"></a>母题</h3><div class="note note-success">
-            <p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-size-subarray-sum/">209. 长度最小的子数组 - 力扣（LeetCode）</a></p><blockquote><p>right作为一个终点,遍历数组,sum作为一个滑动窗口,及时更新left</p><p><code>时间复杂度</code> :O(n)</p></blockquote>
+                <h2 id="扫描器-SCANN"><a href="#扫描器-SCANN" class="headerlink" title="扫描器 SCANN"></a>扫描器 SCANN</h2><blockquote>
+<p>扫描器:开始的第一步</p>
+</blockquote>
+<h3 id="1-1-解释器框架-Interpreter-FrameWork"><a href="#1-1-解释器框架-Interpreter-FrameWork" class="headerlink" title="1.1. 解释器框架(Interpreter FrameWork):"></a>1.1. 解释器框架(Interpreter FrameWork):</h3><span class="label label-primary">开始的第一步</span>
+
+<div class="note note-primary">
+            <p>祝你玩的开心!</p>
           </div>
 
 
-    <div class="fold">
-      <div class="fold-title fold-into collapsed" data-toggle="collapse" href="#collapse-65ad56e5" role="button" aria-expanded="false" aria-controls="collapse-65ad56e5">
-        <div class="fold-arrow">▶</div>题解
-      </div>
-      <div class="fold-collapse collapse" id="collapse-65ad56e5">
-        <div class="fold-content">
-          <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">solution</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">minSubArrayLen</span><span class="hljs-params">(<span class="hljs-type">int</span> target,<span class="hljs-type">int</span>[]nums)</span>&#123;<br>        <span class="hljs-type">int</span> left=<span class="hljs-number">0</span>;<br>        <span class="hljs-type">int</span> sum=<span class="hljs-number">0</span>;<br>        <span class="hljs-type">int</span> result=Integer.MAX_VALUE;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> right=<span class="hljs-number">0</span>;right&lt;nums.length;right++)&#123;<br>            <span class="hljs-comment">//right作为滑动窗口终点,逐个读入数字</span><br>            sum+=nums[right];<br>            <span class="hljs-keyword">while</span>(sum&gt;=target)&#123;<br>                <span class="hljs-comment">//及时和原有的result结果比谁更短,及时更新结果</span><br>                result=Math.min(result,right-left+<span class="hljs-number">1</span>);<br>                <span class="hljs-comment">//去除掉滑动窗口起点的值</span><br>                sum-=nums[left++];<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> result==Integer.MAX_VALUE?<span class="hljs-number">0</span>:result;<br>    &#125; <br>&#125;<br></code></pre></td></tr></table></figure>
-        </div>
-      </div>
-    </div>
 
+<h3 id="1-2-词位和标记概念"><a href="#1-2-词位和标记概念" class="headerlink" title="1.2 词位和标记概念"></a>1.2 词位和标记概念</h3><h3 id="1-3-正则语言和表达式"><a href="#1-3-正则语言和表达式" class="headerlink" title="1.3 正则语言和表达式"></a>1.3 正则语言和表达式</h3><h3 id="1-4SCANNER-CLASS类"><a href="#1-4SCANNER-CLASS类" class="headerlink" title="1.4SCANNER CLASS类"></a>1.4SCANNER CLASS类</h3><h3 id="1-5-识别词位"><a href="#1-5-识别词位" class="headerlink" title="1.5 识别词位:"></a>1.5 识别词位:</h3><h3 id="1-6-较长的Lexemes-词位"><a href="#1-6-较长的Lexemes-词位" class="headerlink" title="1.6 较长的Lexemes(词位)"></a>1.6 较长的Lexemes(词位)</h3><blockquote>
+<p>作为扫描仪的真正核心要素:会从LOX当中的词位开始,每个自己设定好的字符都会有它们自己的意思</p>
+<p>和前面的<code>EnumType.Class</code> 确定的类似</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><br></code></pre></td></tr></table></figure>
 
-
-
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考:"></a>参考:</h2><p>参考网址内容:</p>
+<section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://craftinginterpreters.com/scanning.html#regular-languages-and-expressions">Scanning · Crafting Interpreters</a>(英文版本)[^2 ]: <a href="%E4%B8%AD%E6%96%87%E7%89%88%E6%9C%AC">Lox 语言 · 构建解释</a>(<a target="_blank" rel="noopener" href="https://craftinginterpreters.fullstack.org.cn/the-lox-language.html">https://craftinginterpreters.fullstack.org.cn/the-lox-language.html</a>)
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span>可以参考的实现语言的网址: <a target="_blank" rel="noopener" href="https://lox.nanmu.me/zh-cn/">Lox Playground - 在你的浏览器中运行你的 Lox 代码</a>
+<a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
                 
               </div>
             
@@ -320,15 +321,8 @@
     
       <span class="category-chain">
         
-  <a href="/categories/Leetcode/" class="category-chain-item">Leetcode</a>
+  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="category-chain-item">计算机基础知识</a>
   
-  
-    <span>></span>
-    
-  <a href="/categories/Leetcode/slideWindow/" class="category-chain-item">slideWindow</a>
-  
-  
-
   
 
       </span>
@@ -342,7 +336,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Leetcode/" class="print-no-link">#Leetcode</a>
+        <a href="/tags/Compiler/" class="print-no-link">#Compiler</a>
+      
+        <a href="/tags/CRAFTING-INTERPRETERS/" class="print-no-link">#CRAFTING INTERPRETERS</a>
       
     </div>
   
@@ -354,8 +350,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Leetcode经典题目</div>
-      <div>http://example.com/2024/10/22/leetcode/SlideWindow/</div>
+      <div>编译原理(自己一步步设计一门语言)</div>
+      <div>http://example.com/2024/12/12/compiler/2024-12-12-编译原理(自己一步步设计一门语言)/</div>
     </div>
     <div class="license-meta">
       
@@ -367,7 +363,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年10月22日</div>
+          <div>2024年12月12日</div>
         </div>
       
       
@@ -399,9 +395,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/10/24/compiler/%CE%B5-NFA/" title="编译原理(ε-NFA和NFA和DFA)">
+                      <a href="/2024/12/19/work_in_LineWell/%E4%BA%86%E8%A7%A3%E4%B8%9A%E5%8A%A1/" title="">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">编译原理(ε-NFA和NFA和DFA)</span>
+                        <span class="hidden-mobile"></span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -409,8 +405,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/10/22/test-post/" title="我的第一篇博客">
-                        <span class="hidden-mobile">我的第一篇博客</span>
+                      <a href="/2024/12/12/compiler/2024-12-14%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/" title="编译原理(自己一步步设计一门语言)">
+                        <span class="hidden-mobile">编译原理(自己一步步设计一门语言)</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
