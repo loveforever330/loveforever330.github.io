@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>我的第一篇博客</title>
+    <link href="/2025/05/20/test-post/"/>
+    <url>/2025/05/20/test-post/</url>
+    
+    <content type="html"><![CDATA[<h3 id="自己动手搭建的博客"><a href="#自己动手搭建的博客" class="headerlink" title="自己动手搭建的博客"></a>自己动手搭建的博客</h3><blockquote><p>实现网页博客的Markdown笔记自由 </p></blockquote><ul><li>实现本地写markdown笔记自动上传至网站</li></ul><h3 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h3><ul><li>一直以来,我都想有一个属于自己的博客网站,参考网上的成熟方案,选择用腾讯的EdgeOnePages+HEXO框架+githubPages去尝试实现</li></ul><span class="label label-info">EdgeonePages</span>   <span class="label label-success">hexo</span>  <span class="label label-primary">githubPages</span>  <span class="label label-default">DNS</span><blockquote><p> 选用EdgeOne的原因是Github的Pages从国内访问的速度很慢并且不稳定,可以通过将github仓库导入到腾讯的Edgeone Pages即可实现类似功能,并且也不会出现图片经常转圈圈的情况</p></blockquote><ul><li>配置流程: <div class="note note-info">            <p>github 创建用户名同名仓库clone到本地&#x3D;&#x3D;&gt;本地安装hexo框架&#x3D;&#x3D;&gt;安装fluid主题&#x3D;&#x3D;&gt;上传第一份&#x3D;&#x3D;&gt;尝试公网能否打开<strong>用户名github.io</strong>&#x3D;&#x3D;&gt;购买属于自己的域名将记录解析到github.io&#x3D;&#x3D;&gt;配置导入到腾讯的EdgeOne中&#x3D;&#x3D;&gt;可将图片上传至自己的图床&#x3D;&#x3D;&gt;测试连接响应速度</p>          </div></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>个人随想</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Blog</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>java并发编程知识点</title>
     <link href="/2025/01/03/interview/JUC/OverViewJUC/"/>
     <url>/2025/01/03/interview/JUC/OverViewJUC/</url>
@@ -121,31 +146,6 @@
     <tags>
       
       <tag>Compiler</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>我的第一篇博客</title>
-    <link href="/2024/10/22/test-post/"/>
-    <url>/2024/10/22/test-post/</url>
-    
-    <content type="html"><![CDATA[<h3 id="自己动手搭建的博客"><a href="#自己动手搭建的博客" class="headerlink" title="自己动手搭建的博客"></a>自己动手搭建的博客</h3><blockquote><p>实现网页博客的Markdown笔记自由 </p></blockquote><ul><li>实现本地写markdown笔记自动上传至网站</li></ul>    <div class="fold">      <div class="fold-title fold-success collapsed" data-toggle="collapse" href="#collapse-a4a9dbda" role="button" aria-expanded="false" aria-controls="collapse-a4a9dbda">        <div class="fold-arrow">▶</div>test      </div>      <div class="fold-collapse collapse" id="collapse-a4a9dbda">        <div class="fold-content">          <p>success to download hexo and run it on web</p>        </div>      </div>    </div><div class="note note-danger">            <p>I noticed that write blog is easy for me to remember everything</p>          </div><span class="label label-danger">danger</span><div class="group-image-container"><div class="group-image-row"><div class="group-image-wrap"><img src="/source/_posts/test-post/2025-05-20T154924.png" alt="2025-05-20T154924"></div><div class="group-image-wrap"><img src="/source/_posts/test-post/R-C.jpg" alt="2025-05-20T155006"></div><div class="group-image-wrap"><img src="/source/_posts/test-post/R-C.jpg" alt="2025-05-20T155006"></div></div><div class="group-image-row"><div class="group-image-wrap"><img src="/source/_posts/test-post/R-C.jpg" alt="2025-05-20T155006"></div><div class="group-image-wrap"><img src="/source/_posts/test-post/R-C.jpg" alt="2025-05-20T155006"></div><div class="group-image-wrap"><img src="/source/_posts/test-post/R-C.jpg" alt="2025-05-20T155006"></div></div></div>]]></content>
-    
-    
-    <categories>
-      
-      <category>测试</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Blog</tag>
       
     </tags>
     
